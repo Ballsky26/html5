@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio & Video</title>
+    <!-- <style>
+      body,
+      h1 {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* background-color: rgba(0, 0, 0, 0.3, green, blue, alpha); */
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 242, 96, 0.3),
+          rgba(5, 117, 230, 0.3)
+        );
+        color: rgba(255, 255, 255, 1);
+        font-size: 3em;
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      .video-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- <audio src="audio/Sabai.mp3" controls></audio> -->
+    <!-- <figure>
+      <figcaption>Dengarkan "Sabai - Memories"</figcaption>
+      <audio controls>
+        <source src="audio/Sabai.ogg" type="audio/ogg" />
+        <source src="audio/Sabai.mp3" type="audio/mpeg" />
+      </audio>
+    </figure> -->
+
+    <!-- <video src="video/video1.mp4" width="500" controls></video> -->
+
+    <!-- <figure>
+      <figcaption>Video Baru</figcaption>
+      <video controls width="500" poster="img/gambar.png" loop autoplay muted>
+        <source src="video/video1.webm" type="video/webm" />
+        <source src="video/video1.mp4" type="video/webm" />
+        Browser tidak mendukung Tag <code>Video</code>
+      </video>
+    </figure> -->
+
+    <!-- <div class="hero">
+      <h1>Hello Ballsky</h1>
+      <video
+        class="video-bg"
+        src="video/video1.webm"
+        autoplay
+        muted
+        loop
+      ></video>
+    </div> -->
+
+    <video controls width="400">
+      <source src="video/video1.mp4" type="video/mp4" />
+      <track
+        src="captions/caption2.vtt"
+        kind="captions"
+        title="Bahasa Indonesia"
+        srclang="id"
+      />
+      <track
+        src="captions/caption2.vtt"
+        kind="captions"
+        title="English"
+        srclang="en"
+      />
+    </video>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/1LZf4ZS_QeI"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </body>
+</html>

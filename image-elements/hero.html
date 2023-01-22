@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Elements</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125em;
+        line-height: 1.6;
+        color: #333;
+        padding: 2em;
+      }
+      .hero {
+        display: grid;
+        grid-gap: 2em;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @media (min-width: 960px) {
+        .hero {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Hello Ballsky</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, qui
+          molestiae doloribus consectetur quod voluptatem reiciendis quae
+          labore, excepturi illo corrupti quisquam minus rerum quia quis maxime
+          eum obcaecati. Expedita.
+        </p>
+      </div>
+      <picture>
+        <source
+          media="(min-width: 960px)"
+          srcset="img2/large.jpg"
+          sizes="50vw"
+        />
+        <source media="(min-height: 600px)" srcset="img2/medium.jpg" />
+        <img src="img2/small.jpg" alt="Gambar Medium" />
+      </picture>
+    </div>
+  </body>
+</html>
