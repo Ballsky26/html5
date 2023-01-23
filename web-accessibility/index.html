@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Accessibility</title>
+    <style>
+      body {
+        background-color: #ddd;
+      }
+
+      h1 {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello Ballsky !</h1>
+    <label
+      >Nama :
+      <input type="text" name="nama" id="nama" />
+    </label>
+    <label for="jurusan">Jurusan :</label>
+    <select name="jurusan" id="jurusan">
+      <option value="it">Teknik Informatika</option>
+      <option value="ti">Teknik Industri</option>
+    </select>
+    <button style="margin-bottom: 30px" onclick="alert('tombol asli')">
+      Kirim!
+    </button>
+
+    <div tabindex="0" onclick="showAlert('halo')" role="button" id="button1">
+      Tombol 1
+    </div>
+    <div>Tombol 2</div>
+    <div>Tombol 3</div>
+
+    <script>
+      const showAlert = (text) => alert(text);
+      const button1 = document.querySelector("#button1");
+      button1.addEventListener("keyup", function (e) {
+        if (e.keyCode == 32 || e.keyCode == 13) {
+          showAlert("halo");
+        }
+      });
+    </script>
+  </body>
+</html>
